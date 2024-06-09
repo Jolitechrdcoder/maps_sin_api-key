@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAPS</title>
+</head>
+<body>
+ <iframe id="google-maps"  width="1500" height="800" frameborder="0" loading = "lazy" allowfullscreen=""></iframe>
+</body>
+<script> 
+
+
+    var latitude =19.466963453577936;
+    var longitude =-70.67647034746525;
+
+    function actualizarIframe(latitude , longitude){
+
+        var iframe = document.getElementById('google-maps');
+
+        var newUrl = `https://www.google.com/maps?q=${latitude},${longitude}&output=embed`;
+
+        iframe.src = newUrl;
+    }
+
+
+actualizarIframe(latitude,longitude);
+</script>
+</html>
